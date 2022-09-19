@@ -16,7 +16,7 @@ public class MyRadiosButtonsWindow {
 
         ButtonGroup osBg = new ButtonGroup(); //crea un grupo de botones
 
-        JRadioButton rb1 = new JRadioButton("Lixux");
+        JRadioButton rb1 = new JRadioButton("linux");
         rb1.setActionCommand("linux");//establece el comando del boton
         JRadioButton rb2 = new JRadioButton("Windows");
         rb2.setActionCommand("windows");
