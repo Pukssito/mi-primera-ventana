@@ -79,7 +79,7 @@ public class Calculator2Window {
         boton4.setBackground(new Color(0,128,128));
 
         JPanel panelGrid2 = new JPanel();
-        GridLayout gl2 = new GridLayout(1,0,10,5);
+        GridLayout gl2 = new GridLayout(1,0,10,10);
         panelGrid2.setLayout(gl2);
         panelBotones.add(panelGrid2, BorderLayout.SOUTH);
 
