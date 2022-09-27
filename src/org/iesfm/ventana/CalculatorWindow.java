@@ -8,16 +8,16 @@ public class CalculatorWindow {
 
     public static void main(String[] args) {
 
-        JFrame ventanaPrincipal = new JFrame();
-        ventanaPrincipal.setTitle("Calculadora");
-        ventanaPrincipal.setBounds(50,50,500,120);
-        ventanaPrincipal.setVisible(true);
-        ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame f = new JFrame();
+        f.setTitle("Calculadora");
+        f.setBounds(50,50,500,120);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panelPrincipal = new JPanel();
         BorderLayout borderLayout = new BorderLayout(10,10);
         panelPrincipal.setLayout(borderLayout);
-        ventanaPrincipal.add(panelPrincipal);
+        f.add(panelPrincipal);
 
         JPanel panelText= new JPanel();
         FlowLayout fl = new FlowLayout(FlowLayout.CENTER, 10, 10);
@@ -84,8 +84,8 @@ public class CalculatorWindow {
 
 
 
-        ventanaPrincipal.repaint();
-        ventanaPrincipal.revalidate();
+        f.repaint();
+        f.revalidate();
 
 
     }

@@ -1,5 +1,4 @@
 package org.iesfm.ventana;
-
 import javax.swing.*;
 import java.awt.*;
 
