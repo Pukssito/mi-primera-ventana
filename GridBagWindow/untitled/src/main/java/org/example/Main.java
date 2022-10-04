@@ -24,8 +24,8 @@ public class Main {
                         0,
                         2,
                         2,
+                        5,
                         1,
-                        4,
                         GridBagConstraints.CENTER,
                         GridBagConstraints.BOTH,
                         new Insets(0,0,0,0),0,0)
@@ -39,10 +39,10 @@ public class Main {
                         2,
                         1,
                         1,
-                        1,
+                        2,
                         1,
                         GridBagConstraints.CENTER,
-                        GridBagConstraints.BOTH,
+                        GridBagConstraints.HORIZONTAL,
                         new Insets(0,0,0,0),0,0)
                 );
        ;
