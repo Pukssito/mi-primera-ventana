@@ -31,10 +31,14 @@ public class Formulario {
     private JButton deleteButton;
     private JScrollPane scroll;
     private JPanel surPanel;
-    private CustomerTableModel ctm;
+
 
 
     public Formulario() {
+        List<Customer> customers = new ArrayList<>();
+        CustomerTableModel ctm = new CustomerTableModel(customers);
+        tableCustomer.setModel(ctm);
+
         guardar.addActionListener(e -> {
 
             String id = tfId.getText();
@@ -47,12 +51,8 @@ public class Formulario {
             String tlf = tfTlf.getText();
 
             Customer customer = new Customer(id, name, name2, surName, surName2, sexo, dir, tlf);
-
-           List<Customer> customers = new ArrayList<>();
-              customers.add(customer);
-
-            ctm = new CustomerTableModel(customers);
-            tableCustomer.setModel(ctm);
+            ctm.add(customer);
+            ctm.fireTableDataChanged();
             
 
 
@@ -62,6 +62,8 @@ public class Formulario {
         deleteButton.addActionListener(e -> {
 
             int row = tableCustomer.getSelectedRow();
+            ctm.delete(row);
+            ctm.fireTableDataChanged();
 
 
         });
