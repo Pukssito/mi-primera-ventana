@@ -1,9 +1,7 @@
 package org.iesfm.ventana;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.util.concurrent.Flow;
 
 import static java.awt.Color.*;
 
@@ -19,6 +17,8 @@ public class Calculator2Window {
 
         JPanel panelPrincipal = new JPanel();
         BorderLayout borderLayout = new BorderLayout(10,10);
+        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        panelPrincipal.setOpaque(false);
         panelPrincipal.setLayout(borderLayout);
         f.add(panelPrincipal);
 
@@ -34,11 +34,13 @@ public class Calculator2Window {
         JPanel panelBotones = new JPanel();
         BorderLayout bl = new BorderLayout(10,10);
         panelBotones.setLayout(bl);
+        panelBotones.setOpaque(false);
         panelPrincipal.add(panelBotones, BorderLayout.CENTER);
 
         JPanel panelGrid = new JPanel();
         GridLayout gl = new GridLayout(4,4,10,10);
         panelGrid.setLayout(gl);
+        panelGrid.setOpaque(false);
         panelBotones.add(panelGrid,BorderLayout.CENTER);
 
         JButton boton1 = new JButton("7");
@@ -81,6 +83,8 @@ public class Calculator2Window {
         JPanel panelGrid2 = new JPanel();
         GridLayout gl2 = new GridLayout(1,0,10,10);
         panelGrid2.setLayout(gl2);
+        panelGrid2.setOpaque(false);
+        panelGrid2.setPreferredSize(new Dimension(0,75)); //para redimensionar el panel
         panelBotones.add(panelGrid2, BorderLayout.SOUTH);
 
 
@@ -95,6 +99,7 @@ public class Calculator2Window {
 
         panelGrid2.add(botonReset);
         panelGrid2.add(botonIgual);
+
 
 
 
